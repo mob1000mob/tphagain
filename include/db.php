@@ -1,6 +1,5 @@
 <?php
-	define('DB_HOST', 'tphserver.mysql.database.azure.com');
-	define('DB_USER', 'newserver');
-	define('DB_PASS', 'tphadmin');
-	define('DB_NAME', 'ThePortfolioHub123');
+$conn = mysqli_init();
+mysqli_ssl_set($conn,NULL,NULL, "DigiCertGlobalRootCA.crt.pem", NULL, NULL);
+mysqli_real_connect($conn, "tphserver.mysql.database.azure.com", "tphadmin", "ThePortfolioHub123", "bagongserver", 3306, MYSQLI_CLIENT_SSL);
 ?>
